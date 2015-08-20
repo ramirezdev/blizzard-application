@@ -1,0 +1,20 @@
+{
+  "name": "rainbow-app",
+  "version": "1.0.0",
+  "authors": [
+    "ramirezdev <christian@ramirezdev.com>"
+  ],
+  "description": "just a rainbow app",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "backbone": "~1.2.1"
+  }
+}
