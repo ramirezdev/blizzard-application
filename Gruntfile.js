@@ -40,6 +40,13 @@ module.exports = function(grunt) {
       }
     },
 
+    'gh-pages': {
+      options: {
+        base: './dist'
+      },
+      src: ['**']
+    },
+
 
     sass: {
 
@@ -63,9 +70,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-jst');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.registerTask('default', ['jshint', 'clean', 'jst', 'requirejs']);
-  //grunt.registerTask('default', []);
+  grunt.registerTask('publish', ['jshint', 'clean', 'jst', 'requirejs', 'gh-pages']);
 
 
 
