@@ -13,9 +13,9 @@ define(function (require, exports, module) {
          */
         app.router.navigate('error');
 
-        /*msgBus.comply('store:set', {
+        msgBus.comply('global:set', {
             title: 'Error'
-        });*/
+        });
 
         //app.layout.setView('.header', new HeaderView());
         app.layout.setView('.main-container', new ErrorView ({

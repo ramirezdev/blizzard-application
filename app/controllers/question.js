@@ -4,7 +4,7 @@ define(function (require, exports, module) {
     var app = require('app');
     var msgBus = require('msgbus');
     var QuestionView = require('views/question');
-    var moment = require('moment');
+    //var moment = require('moment');
     //var HeaderView = require('views/header');
     var controller = {};
 

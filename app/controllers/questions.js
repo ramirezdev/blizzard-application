@@ -1,7 +1,6 @@
 define(function (require, exports, module) {
     'use strict';
 
-    var Backbone = require('backbone');
     var app = require('app');
     var msgBus = require('msgbus');
     var QuestionsView = require('views/Questions');
@@ -9,7 +8,7 @@ define(function (require, exports, module) {
     var BreadCrumbView = require('views/breadcrumb');*/
     var controller = {};
 
-    controller.getQuestions = function (clientId) {
+    controller.getQuestions = function () {
         require('entities/questions');
         var fetchingQuestions = msgBus.command('questions:entities');
 

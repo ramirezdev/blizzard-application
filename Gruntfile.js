@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     requirejs: {
       compile: {
         options: {
-          mainConfigFile: "./app/config.js"
+          mainConfigFile: "./app/config.js",
           name: "../bower_components/almond/almond",
           out: "./dist/js/source.min.js",
           optimize: "uglify2",
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jst');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-  grunt.registerTask('default', ['jshint', 'clean', 'jst', 'requirejs', 'sass']);
+  grunt.registerTask('default', ['jshint', 'clean', 'jst', 'requirejs']);
   //grunt.registerTask('default', []);
 
 

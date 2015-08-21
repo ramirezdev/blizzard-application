@@ -1,5 +1,9 @@
 define(function (require) {
+
+    /*jshint camelcase: false */
     'use strict';
+
+
 
     var app = require('app');
     var Backbone = require('backbone');
@@ -9,7 +13,7 @@ define(function (require) {
     Entities.Question = Backbone.Model.extend({
         idAttribute: 'question_id',
         defaults: {
-            tags: null
+            tags: null,
             owner: null,
             is_answered: null,
             view_count: null,

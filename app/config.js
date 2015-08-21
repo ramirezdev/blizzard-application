@@ -1,5 +1,6 @@
 require.config({
     paths: {
+        'underscore': '../bower_components/underscore/underscore-min',
         'lodash': '../bower_components/lodash/lodash.min',
         'template': '../bower_components/lodash-template-loader/loader',
         'jquery': '../bower_components/jquery/dist/jquery.min',

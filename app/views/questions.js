@@ -26,7 +26,7 @@ define(function (require, exports, module) {
         showQuestion: function () {
             msgBus.command('question:get', this.model.id);
             app.router.navigate('question/' + this.model.get('questionId'));
-        },
+        }
 
         
     });

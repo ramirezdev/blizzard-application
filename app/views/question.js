@@ -1,9 +1,10 @@
 define(function (require, exports, module) {
+	'use strict';
 
-	var app = require('app');
+	//var app = require('app');
 	var Backbone = require('backbone');
     var msgBus = require('msgbus');
-    var moment = require('moment');
+    //var moment = require('moment');
     var QuestionView;
 
     var QuestionDetails = Backbone.View.extend({
