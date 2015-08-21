@@ -4,8 +4,8 @@ define(function (require, exports, module) {
     var Backbone = require('backbone');
     var app = require('app');
     var msgBus = require('msgbus');
-    /*var EquifitView = require('views/Questions');
-    var HeaderView = require('views/header');
+    var QuestionsView = require('views/Questions');
+    /*var HeaderView = require('views/header');
     var BreadCrumbView = require('views/breadcrumb');*/
     var controller = {};
 
@@ -32,12 +32,12 @@ define(function (require, exports, module) {
                 model: new Backbone.Model({
                     breadCrumbId: 'Questions'
                 })
-            }));
+            }));*/
 
-            app.layout.setView('.main-container', new EquifitView({
+            app.layout.setView('.main-container', new QuestionsView({
                 collection: Questions
             }));
-            app.layout.render();*/
+            app.layout.render();
         });
 
         $.when(fetchingQuestions).fail(function (model, jqXHR, textStatus) {

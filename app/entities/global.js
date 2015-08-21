@@ -25,5 +25,5 @@ define(function (require, exports, module) {
     });
 
 
-    module.exports = Entities.Store;
+    module.exports = Entities.Global;
 });

@@ -37,9 +37,9 @@ define(function (require, exports, module) {
     /***
      * Set Data Storage
      */
-   /* msgBus.comply('store:set', function(options){
-        app.store.set(options);
-    });*/
+    msgBus.comply('global:set', function(options){
+        app.globalModel.set(options);
+    });
 
 
     /***

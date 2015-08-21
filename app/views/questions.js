@@ -3,8 +3,8 @@ define(function (require, exports, module) {
 
     var app = require('app');
     var msgBus = require('msgbus');
-    var moment = require('moment');
-    var EquifitsView;
+    //var moment = require('moment');
+    var QuestionsView;
 
     var QuestionItem = Backbone.View.extend({
         manage: true,
@@ -31,7 +31,7 @@ define(function (require, exports, module) {
         
     });
 
-    EquifitsView = Backbone.Layout.extend({
+    QuestionsView = Backbone.Layout.extend({
         template: 'questions',
 
         initialize: function () {
@@ -41,7 +41,7 @@ define(function (require, exports, module) {
         beforeRender: function () {
             this.collection.each(function (item) {
 
-                this.insertView('.questions-list', new Item({
+                this.insertView('.questions-list', new QuestionItem({
                     model: item
                 }));
 
@@ -50,5 +50,5 @@ define(function (require, exports, module) {
 
     });
 
-    module.exports = EquifitsView;
+    module.exports = QuestionsView;
 });

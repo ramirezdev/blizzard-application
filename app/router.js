@@ -13,36 +13,14 @@ define(function (require, exports, module) {
         },
 
         questions: function () {
-           /* if (!equifitId && !formId) {
-                msgBus.commands.execute('store:set', {
-                    clientId: clientId
-                });
-                msgBus.commands.execute('equifits:get',  clientId);
-            }
-            else if (!formId) {
-                msgBus.commands.execute('store:set', {
-                    clientId: clientId,
-                    equifitId: equifitId
-                });
-                console.log('route get equifit:', clientId, equifitId);
-                msgBus.commands.execute('equifit:get',  equifitId);
-            }
-            else {
-                msgBus.commands.execute('store:set', {
-                    clientId: clientId,
-                    equifitId: equifitId,
-                    formId: formId
-                });
-                //console.log('route get form:', clientId, equifitId, formId);
-                msgBus.commands.execute('form:get', formId);
-            }*/
+           msgBus.commands.execute('questions:get');
         },
 
         question: function (questionId) {
-            msgBus.commands.execute('store:set', {
-                clientId: clientId
+            msgBus.command('global:set', {
+                questionID: questionId
             });
-            msgBus.commands.execute('equifit:create');
+            msgBus.command('question:get', questionId);
         },
 
         errorPage: function () {
