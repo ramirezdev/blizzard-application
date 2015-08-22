@@ -7319,10 +7319,10 @@ button.close {
     display: none !important;
   }
 }
-#main .all-tags .tags-list .tag-item {
+#main .blizzard-app .main-container .all-tags .tags-list .tag-item {
   margin: 5px;
 }
-#main .questions-list {
+#main .blizzard-app .main-container .questions-list {
   list-style: none;
   padding: none;
 }
