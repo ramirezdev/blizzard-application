@@ -11600,7 +11600,7 @@ input[type="button"].btn-block {
   padding: 0;
 }
 #main .blizzard-app .questions-holder .questions-list h1 {
-  background-image: -webkit-linear-gradient(top, #769944 0%, #769944 22.91667%, #9FB84A 37.5%, #E8E361 55%);
+  background-image: -webkit-linear-gradient(top, #01B2F1 0%, #03A4DE 22.91667%, #0394C7 37.5%, #0377a0 55%);
   -webkit-background-clip: text;
   background-size: 1.2em 1.2em;
   -webkit-text-fill-color: transparent;
