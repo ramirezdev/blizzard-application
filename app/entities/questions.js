@@ -28,6 +28,9 @@ define(function (require) {
 
     Entities.QuestionCollection = Backbone.Collection.extend({
         model: Entities.Question,
+        parse : function(response){
+            return response.items;  
+        }, 
         url: function () {
             return 'https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&site=stackoverflow';
         }
@@ -39,15 +42,16 @@ define(function (require) {
             var collection = new Entities.QuestionCollection();
             var defer = $.Deferred();
             // show loading view  while fetching data
-            msgBus.command('loading:show', {message: 'Loading...'});
+            msgBus.commands.execute('loading:show');
 
                 collection.fetch({
                     success: function (data) {
+                        console.log('data ', data);
                         defer.resolve(data);
-                        msgBus.command('loading:hide');
+                        msgBus.commands.execute('loading:hide');
                     },
                     error: function (model, jqXHR, textStatus) {
-                        msgBus.command('loading:hide');
+                        msgBus.commands.execute('loading:hide');
                         defer.reject(model, jqXHR, textStatus);
                     }
                 });
@@ -57,9 +61,10 @@ define(function (require) {
 
     };
 
-    msgBus.comply('questions:entities', function () {
+    msgBus.reqres.setHandler('questions:entities', function () {
         return API.getQuestionsEntities();
     });
+
 
 
 });

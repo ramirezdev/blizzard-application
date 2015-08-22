@@ -23,7 +23,7 @@ define(function (require, exports, module) {
     QuestionView = Backbone.Layout.extend({
         template: 'question',
         initialize: function () {
-            msgBus.command('scroll:top');
+            msgBus.commands.execute('scroll:top');
         },
 
         beforeRender: function () {

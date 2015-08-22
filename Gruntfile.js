@@ -31,11 +31,13 @@ module.exports = function(grunt) {
       compile: {
         options: {
           mainConfigFile: "./app/config.js",
+          generateSourceMaps: true,
           name: "../bower_components/almond/almond",
           out: "./dist/js/source.min.js",
           optimize: "uglify2",
           wrap: true,
-          findNestedDependencies: true
+          findNestedDependencies: true,
+          preserveLicenseComments: false,
         }
       }
     },

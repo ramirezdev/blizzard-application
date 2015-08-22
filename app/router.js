@@ -13,14 +13,14 @@ define(function (require, exports, module) {
         },
 
         questions: function () {
-           msgBus.commands.execute('questions:get');
+            msgBus.commands.execute('questions:get');
         },
 
         question: function (questionId) {
-            msgBus.command('global:set', {
+            msgBus.commands.execute('global:set', {
                 questionID: questionId
             });
-            msgBus.command('question:get', questionId);
+            msgBus.commands.execute('question:get', questionId);
         },
 
         errorPage: function () {

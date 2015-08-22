@@ -13,7 +13,7 @@ define(function (require, exports, module) {
          */
         app.router.navigate('error');
 
-        msgBus.comply('global:set', {
+        msgBus.commands.execute('global:set', {
             title: 'Error'
         });
 

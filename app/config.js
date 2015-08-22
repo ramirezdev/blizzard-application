@@ -6,7 +6,7 @@ require.config({
         'jquery': '../bower_components/jquery/dist/jquery.min',
         'backbone': '../bower_components/backbone/backbone',
         'backbone.layoutmanager': '../bower_components/layoutmanager/backbone.layoutmanager',
-        'backbone.radio': '../bower_components/backbone.radio/build/backbone.radio.min',
+        'backbone.wreqr': '../bower_components/backbone.wreqr/lib/backbone.wreqr',
         'moment': '../bower_components/moment/moment',
         'spin': '../bower_components/spin.js/spin',
         'bootstrap': '../bower_components/dist/bootstrap.min'

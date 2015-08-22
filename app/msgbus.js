@@ -2,14 +2,19 @@ define(function (require, exports, module) {
     'use strict';
 
     var app = require('app');
-    var Radio = require('backbone.radio');
-    var msgBus = Radio.channel('blizzard');
+    var Wreqr = require('backbone.wreqr');
+
+    var msgBus = {
+        reqres: new Wreqr.RequestResponse(),
+        commands: new Wreqr.Commands(),
+        events: new Wreqr.EventAggregator()
+    };
 
     
     /***
      * Get Questions
      */
-    msgBus.comply('questions:get', function(){
+    msgBus.commands.setHandler('questions:get', function(){
         require(['controllers/questions'], function (controller) {
             controller.getQuestions();
         });
@@ -18,7 +23,7 @@ define(function (require, exports, module) {
     /***
      * Get Question
      */
-    msgBus.comply('question:get', function(questionId){
+    msgBus.commands.setHandler('question:get', function(questionId){
         require(['controllers/question'], function (controller) {
             controller.getQuestion(questionId);
         });
@@ -28,7 +33,7 @@ define(function (require, exports, module) {
      * Helper Event triggers
      * @type {Object}
      */
-    msgBus.comply('scroll:top', function () {
+    msgBus.commands.setHandler('scroll:top', function () {
         require(['controllers/helper'], function (controller) {
             controller.scrollTop();
         });
@@ -37,7 +42,7 @@ define(function (require, exports, module) {
     /***
      * Set Data Storage
      */
-    msgBus.comply('global:set', function(options){
+    msgBus.commands.setHandler('global:set', function(options){
         app.globalModel.set(options);
     });
 
@@ -45,7 +50,7 @@ define(function (require, exports, module) {
     /***
      * Show loading view
      */
-    msgBus.comply('loading:show', function(options){
+    msgBus.commands.setHandler('loading:show', function(options){
         require(['controllers/loading'], function (controller) {
             controller.show(options);
         });
@@ -54,13 +59,13 @@ define(function (require, exports, module) {
     /***
      * Hide loading view
      */
-    msgBus.comply('loading:hide', function(){
+    msgBus.commands.setHandler('loading:hide', function(){
         require(['controllers/loading'], function (controller) {
             controller.hide();
         });
     });
 
-    msgBus.comply('blizzard:error', function(model, jqXHR, textStatus){
+    msgBus.commands.setHandler('blizzard:error', function(model, jqXHR, textStatus){
         require(['controllers/error'], function (controller) {
             controller.init(model, jqXHR, textStatus);
         });

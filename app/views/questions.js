@@ -24,8 +24,8 @@ define(function (require, exports, module) {
          * show Question page
          */
         showQuestion: function () {
-            msgBus.command('question:get', this.model.id);
-            app.router.navigate('question/' + this.model.get('questionId'));
+            msgBus.commands.execute('question:get', this.model.id);
+            app.router.navigate('question/' + this.model.get('question_id'));
         }
 
         
@@ -39,6 +39,7 @@ define(function (require, exports, module) {
         },
 
         beforeRender: function () {
+            console.log(this.collection);
             this.collection.each(function (item) {
 
                 this.insertView('.questions-list', new QuestionItem({

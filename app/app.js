@@ -33,6 +33,7 @@ define(function (require, exports, module) {
         fetchTemplate: function(path) {
             // Check for a global JST object.  When you build your templates for
             // production, ensure they are all attached here.
+            require('../dist/js/templates.min');
             var JST = window.JST || {};
             // Concatenate the file extension.
             path = path + '.html';
