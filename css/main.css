@@ -7319,6 +7319,10 @@ button.close {
     display: none !important;
   }
 }
+#main .blizzard-app .main-container .search-holder ul {
+  list-style: none;
+  padding: 0;
+}
 #main .blizzard-app .main-container .all-tags .tags-list .tag-item {
   margin: 5px;
 }
