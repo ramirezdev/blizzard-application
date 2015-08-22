@@ -26,5 +26,24 @@ define(function (require, exports, module) {
         });
     };
 
+    controller.searchQuestions = function (term) {
+        require('entities/questions');
+        app.globalModel.set('searchTerm', term);
+
+        var fetchingQuestions = msgBus.reqres.request('questions:search:entities');
+        
+        $.when(fetchingQuestions).then(function (questions) {
+        
+            app.layout.setView('.main-container', new QuestionsView({
+                collection: questions
+            }));
+            app.layout.render();
+        });
+
+        $.when(fetchingQuestions).fail(function (model, jqXHR, textStatus) {
+            msgBus.commands.execute('blizzard:error',  model, jqXHR, textStatus);
+        });
+    };
+
     module.exports = controller;
 });

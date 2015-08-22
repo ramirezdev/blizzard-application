@@ -15,7 +15,8 @@ define(function (require, exports, module) {
         defaults: {
 
             questionID: null,
-            title: null
+            title: null,
+            searchTerm: null
 			
         }//,
 

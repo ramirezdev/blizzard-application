@@ -21,6 +21,15 @@ define(function (require, exports, module) {
     });
 
     /***
+     * Search Questions
+     */
+    msgBus.commands.setHandler('questions:search', function(term){
+        require(['controllers/questions'], function (controller) {
+            controller.searchQuestions(term);
+        });
+    });
+
+    /***
      * Get Question
      */
     msgBus.commands.setHandler('question:get', function(questionId){

@@ -3,7 +3,7 @@ define(function (require) {
     /*jshint camelcase: false */
     'use strict';
 
-    //var app = require('app');
+    var app = require('app');
     var Backbone = require('backbone');
     var msgBus = require('msgbus');
     var Entities = {};
@@ -36,6 +36,16 @@ define(function (require) {
         }
     });
 
+    Entities.SearchQuestionCollection = Backbone.Collection.extend({
+        model: Entities.Question,
+        parse : function(response){
+            return response.items;  
+        }, 
+        url: function () {
+            return 'https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=' + app.globalModel.get('searchTerm') +'&site=stackoverflow';
+        }
+    });
+
     var API = {
 
         getQuestionsEntities: function () {
@@ -57,12 +67,35 @@ define(function (require) {
                 });
 
             return defer.promise();
+        },
+
+        getSearchQuestionsEntities: function () {
+            var collection = new Entities.SearchQuestionCollection();
+            var defer = $.Deferred();
+            msgBus.commands.execute('loading:show');
+
+                collection.fetch({
+                    success: function (data) {
+                        defer.resolve(data);
+                        msgBus.commands.execute('loading:hide');
+                    },
+                    error: function (model, jqXHR, textStatus) {
+                        msgBus.commands.execute('loading:hide');
+                        defer.reject(model, jqXHR, textStatus);
+                    }
+                });
+
+            return defer.promise();
         }
 
     };
 
     msgBus.reqres.setHandler('questions:entities', function () {
         return API.getQuestionsEntities();
+    });
+
+    msgBus.reqres.setHandler('questions:search:entities', function () {
+        return API.getSearchQuestionsEntities();
     });
 
 

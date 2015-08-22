@@ -34,12 +34,34 @@ define(function (require, exports, module) {
     QuestionsView = Backbone.Layout.extend({
         template: 'questions',
 
+        events: {
+            'click #topic-submit': 'searchQuestions'
+        },
+
+        searchQuestions: function () {
+            var term = $('#topic').val();
+            if (term !== '') {
+                console.log('SEARCH THIS: ', term);
+                msgBus.commands.execute('questions:search', term);
+            }
+            
+        },
+
         initialize: function () {
             msgBus.commands.execute('scroll:top');
         },
 
+        afterRender: function () {
+
+            var currentTerm = app.globalModel.get('searchTerm');
+            if (currentTerm) {
+                $('#topic').val(currentTerm);
+            }
+
+        },
+
         beforeRender: function () {
-            console.log(this.collection);
+            
             this.collection.each(function (item) {
 
                 this.insertView('.questions-list', new QuestionItem({
