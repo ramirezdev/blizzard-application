@@ -26,6 +26,7 @@ define(function (require, exports, module) {
 
             
             controller.getAnswers();
+            //app.layout.render();
         });
 
         $.when(fetchingQuestion).fail(function (model, jqXHR, textStatus) {
@@ -34,6 +35,7 @@ define(function (require, exports, module) {
     };
 
     controller.getAnswers = function () {
+        require('entities/answers');
 
         var fetchingAnswers = msgBus.reqres.request('answers:entities');
 
