@@ -7319,10 +7319,11 @@ button.close {
     display: none !important;
   }
 }
-#main ul {
+ul {
   list-style: none;
   padding: none;
 }
+
 #main .all-tags .tags-list .tag-item {
   margin: 5px;
 }
