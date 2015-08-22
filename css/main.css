@@ -11592,6 +11592,9 @@ input[type="button"].btn-block {
     display: none !important;
   }
 }
+#main {
+  background: url(../img/bg-subpage.jpg) #010E16 50% 0 no-repeat;
+}
 #main .blizzard-app .questions-holder .questions-list {
   list-style: none;
   padding: 0;
