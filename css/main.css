@@ -11592,18 +11592,11 @@ input[type="button"].btn-block {
     display: none !important;
   }
 }
-#main .blizzard-app .main-container .search-holder ul {
+#main .blizzard-app .questions-holder .questions-list {
   list-style: none;
   padding: 0;
 }
-#main .blizzard-app .main-container .all-tags .tags-list .tag-item {
-  margin: 5px;
-}
-#main .blizzard-app .main-container .questions-list {
-  list-style: none;
-  padding: 0;
-}
-#main .blizzard-app .main-container .questions-list li {
+#main .blizzard-app .questions-holder .questions-list li {
   cursor: pointer;
 }
 
