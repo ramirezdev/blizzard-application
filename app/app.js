@@ -13,8 +13,7 @@ define(function (require, exports, module) {
     var app = {
         // The root path to run the application.
     	root: './app',
-        globalModel: new Global()/*,
-    	nav: Nav.init(),*/
+        globalModel: new Global()
         
     };
 

@@ -4,7 +4,6 @@ define(function (require, exports, module) {
     var app = require('app');
     var msgBus = require('msgbus');
     var ErrorView = require('views/error');
-    //var HeaderView = require('views/header');
     var errorModule = {};
 
     errorModule.init = function (model, jqXHR) {

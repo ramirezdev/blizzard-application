@@ -6,8 +6,6 @@ define(function (require, exports, module) {
     //var moment = require('moment');
     var AnswersView;
 
-
-
     var AnswerItem = Backbone.View.extend({
         manage: true,
         template: 'answer-item',

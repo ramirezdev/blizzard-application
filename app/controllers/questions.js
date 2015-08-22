@@ -6,8 +6,6 @@ define(function (require, exports, module) {
     var QuestionsView = require('views/questions');
     var TagsView = require('views/tags');
     var questionsViewModule;
-    /*var HeaderView = require('views/header');
-    var BreadCrumbView = require('views/breadcrumb');*/
     var controller = {};
 
     controller.getQuestions = function () {

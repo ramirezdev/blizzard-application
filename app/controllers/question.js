@@ -6,7 +6,6 @@ define(function (require, exports, module) {
     var QuestionView = require('views/question');
     var AnswersView = require('views/answers');
     //var moment = require('moment');
-    //var HeaderView = require('views/header');
     var controller = {};
     var questionViewModule;
 

@@ -1,6 +1,6 @@
 /**
  * Global Module
- * description: Get adn Set common data during app lifespan
+ * description: Get and Set common data during app lifespan
  */
 
 define(function (require, exports, module) {
