@@ -11596,11 +11596,23 @@ input[type="button"].btn-block {
   list-style: none;
   padding: 0;
 }
+#main .blizzard-app .questions-holder .questions-list h1 {
+  background-image: -webkit-linear-gradient(top, #769944 0%, #769944 22.91667%, #9FB84A 37.5%, #E8E361 55%);
+  -webkit-background-clip: text;
+  background-size: 1.2em 1.2em;
+  -webkit-text-fill-color: transparent;
+  color: #E8E361;
+  font-family: "Metallophile", "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
 #main .blizzard-app .questions-holder .questions-list li {
   cursor: pointer;
   background-color: #808080;
   padding: 5px 5px 5px 15px;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
