@@ -7319,11 +7319,12 @@ button.close {
     display: none !important;
   }
 }
+#main ul {
+  list-style: none;
+  padding: none;
+}
 #main .all-tags .tags-list .tag-item {
   margin: 5px;
-}
-#main .questions-list {
-  list-style: none;
 }
 
 /*# sourceMappingURL=main.css.map */
