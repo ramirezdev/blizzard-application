@@ -32,7 +32,7 @@ define(function (require) {
             return response.items;  
         }, 
         url: function () {
-            return 'https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&site=stackoverflow';
+            return app.globalModel.get('APIendpoint') + 'questions?order=desc&sort=' + app.globalModel.get('currentSort') + '&site=stackoverflow';
         }
     });
 
@@ -42,7 +42,7 @@ define(function (require) {
             return response.items;  
         }, 
         url: function () {
-            return 'https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=' + app.globalModel.get('searchTerm') +'&site=stackoverflow';
+            return app.globalModel.get('APIendpoint') + 'search?order=desc&sort=activity&intitle=' + app.globalModel.get('searchTerm') +'&site=stackoverflow';
         }
     });
 

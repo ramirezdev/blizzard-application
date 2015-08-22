@@ -35,16 +35,24 @@ define(function (require, exports, module) {
         template: 'questions',
 
         events: {
-            'click #topic-submit': 'searchQuestions'
+            'click #topic-submit': 'searchQuestions',
+            'change #param-sort': 'sortQuestions'
         },
 
         searchQuestions: function () {
             var term = $('#topic').val();
             if (term !== '') {
-                console.log('SEARCH THIS: ', term);
                 msgBus.commands.execute('questions:search', term);
             }
             
+        },
+
+        sortQuestions: function () {
+
+            var newSort = $('#param-sort').val();
+            app.globalModel.set('currentSort', newSort);
+            msgBus.commands.execute('questions:get');
+
         },
 
         initialize: function () {
@@ -54,9 +62,11 @@ define(function (require, exports, module) {
         afterRender: function () {
 
             var currentTerm = app.globalModel.get('searchTerm');
+            var currentSort = app.globalModel.get('currentSort');
             if (currentTerm) {
                 $('#topic').val(currentTerm);
             }
+            $('#param-sort').val(currentSort);
 
         },
 

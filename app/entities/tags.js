@@ -3,7 +3,7 @@ define(function (require) {
     /*jshint camelcase: false */
     'use strict';
 
-    //var app = require('app');
+    var app = require('app');
     var Backbone = require('backbone');
     var msgBus = require('msgbus');
     var Entities = {};
@@ -16,7 +16,7 @@ define(function (require) {
             return response.items;  
         }, 
         url: function () {
-            return 'https://api.stackexchange.com/2.2/tags?order=desc&sort=popular&site=stackoverflow';
+            return app.globalModel.get('APIendpoint') + 'tags?order=desc&sort=popular&site=stackoverflow';
         }
     });
 

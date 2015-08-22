@@ -13,10 +13,11 @@ define(function (require, exports, module) {
     Entities.Global = Backbone.Model.extend({
 
         defaults: {
-
+            APIendpoint: 'https://api.stackexchange.com/2.2/',
             questionID: null,
             title: null,
-            searchTerm: null
+            searchTerm: null,
+            currentSort: 'activity'
 			
         }//,
 

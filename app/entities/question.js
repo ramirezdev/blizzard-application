@@ -10,7 +10,7 @@ define(function (require) {
 
     Entities.Question = Backbone.Model.extend({
         url: function () {
-            return 'https://api.stackexchange.com/2.2/questions/' + app.globalModel.get('questionID') + '?filter=withbody&site=stackoverflow';
+            return app.globalModel.get('APIendpoint') + 'questions/' + app.globalModel.get('questionID') + '?filter=withbody&site=stackoverflow';
         }
     });
 

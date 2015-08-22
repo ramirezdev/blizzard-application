@@ -16,7 +16,7 @@ define(function (require) {
             return response.items;  
         }, 
         url: function () {
-            return 'https://api.stackexchange.com/2.2/questions/' + app.globalModel.get('questionID') + '/answers?filter=withbody&site=stackoverflow';
+            return app.globalModel.get('APIendpoint') + 'questions/' + app.globalModel.get('questionID') + '/answers?filter=withbody&site=stackoverflow';
         }
     });
 
