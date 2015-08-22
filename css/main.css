@@ -7324,7 +7324,7 @@ button.close {
 }
 #main .blizzard-app .main-container .questions-list {
   list-style: none;
-  padding: none;
+  padding: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
