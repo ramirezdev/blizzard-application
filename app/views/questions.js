@@ -3,7 +3,7 @@ define(function (require, exports, module) {
 
     var app = require('app');
     var msgBus = require('msgbus');
-    //var moment = require('moment');
+    var moment = require('moment');
     var QuestionsView;
 
     var QuestionItem = Backbone.View.extend({
@@ -13,6 +13,14 @@ define(function (require, exports, module) {
 
         events: {
             'click': 'showQuestion'
+        },
+
+        initialize: function () {
+
+            var date = this.model.get('creation_date');
+            date = moment.unix(date).format('MM/DD/YYYY');
+            this.model.set('creation_date', date);
+
         },
 
         serialize: function () {
@@ -33,7 +41,7 @@ define(function (require, exports, module) {
 
     QuestionsView = Backbone.Layout.extend({
         template: 'questions',
-
+        el: false,
         events: {
             'click #topic-submit': 'searchQuestions',
             'change #param-sort': 'sortQuestions'

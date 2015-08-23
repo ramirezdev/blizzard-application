@@ -1,13 +1,10 @@
 <div class="search-holder">
-	<ul>
-		<li>Search Questions: <input type="text" name="topic" id="topic"></li>
-			<li><input type="submit" value="Submit" id="topic-submit"></li>
-   </ul>
+	<label for="topic">Search:</label> <input type="text" name="topic" id="topic"> <input type="submit" value="Submit" id="topic-submit">
+
 </div>
 
-<div class="all-tags"></div>
 <div>
-	<select name="sort" id="param-sort">
+	<label for="param-sort">Sort:</label> <select name="sort" id="param-sort">
 		<option value="activity">activity</option>
 		<option value="votes" >votes</option>
 		<option value="creation">creation</option>
@@ -16,4 +13,6 @@
 		<option value="month">month</option>
 	</select>
 </div>
-<ul class="questions-list"></ul>
+<ul class="questions-list">
+	<h1>Questions: </h1>
+</ul>

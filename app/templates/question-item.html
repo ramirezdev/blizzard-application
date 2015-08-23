@@ -1,9 +1,10 @@
 <div>
-    <h1><%= title %></h1>
+    <h4><%= title %></h1>
+    <span class="date">Posted on <%= creation_date %></span> By <span class="owner-name"><%= owner.display_name %></span>
     <p>
     	<%
     	_.each(tags, function (item) { %>
-    	<span class="tag"><%= item %></span> 
+    	<span class="tag badge"><%= item %></span> 
     	<%	}); 
     	%>
     </p>  

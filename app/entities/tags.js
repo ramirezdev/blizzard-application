@@ -16,7 +16,7 @@ define(function (require) {
             return response.items;  
         }, 
         url: function () {
-            return app.globalModel.get('APIendpoint') + 'tags?order=desc&sort=popular&site=stackoverflow';
+            return app.globalModel.get('APIendpoint') + 'tags?order=desc&sort=popular&site=stackoverflow&key=' + app.globalModel.get('APIkey');
         }
     });
 

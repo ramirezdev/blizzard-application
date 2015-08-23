@@ -4,7 +4,6 @@ define(function (require, exports, module) {
     var app = require('app');
     var msgBus = require('msgbus');
     var QuestionsView = require('views/questions');
-    var TagsView = require('views/tags');
     var questionsViewModule;
     var controller = {};
 
@@ -19,32 +18,14 @@ define(function (require, exports, module) {
                 collection: questions
             });
         
-            app.layout.setView('.main-container', questionsViewModule);
+            app.layout.setView('.questions-holder', questionsViewModule);
 
-            controller.getTags();
+            app.layout.render();
+            msgBus.commands.execute('tags:get');
 
         });
 
         $.when(fetchingQuestions).fail(function (model, jqXHR, textStatus) {
-            msgBus.commands.execute('blizzard:error',  model, jqXHR, textStatus);
-        });
-    };
-
-    controller.getTags = function () {
-        require('entities/tags');
-
-        var fetchingTags = msgBus.reqres.request('tags:entities');
-        
-        $.when(fetchingTags).then(function (tags) {
-        
-            questionsViewModule.insertView('.all-tags', new TagsView({
-                collection: tags
-            }));
-
-            app.layout.render();
-        });
-
-        $.when(fetchingTags).fail(function (model, jqXHR, textStatus) {
             msgBus.commands.execute('blizzard:error',  model, jqXHR, textStatus);
         });
     };
@@ -61,9 +42,10 @@ define(function (require, exports, module) {
                 collection: questions
             });
         
-            app.layout.setView('.main-container', questionsViewModule);
+            app.layout.setView('.questions-holder', questionsViewModule);
 
-            controller.getTags();
+            app.layout.render();
+            msgBus.commands.execute('tags:get');
         });
 
         $.when(fetchingQuestions).fail(function (model, jqXHR, textStatus) {

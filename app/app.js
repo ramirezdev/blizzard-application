@@ -1,5 +1,9 @@
 define(function (require, exports, module) {
+    
+
     'use strict';
+
+    /*global SE*/
 
     var $ = require('jquery');
     var Backbone = require('backbone');
@@ -7,6 +11,15 @@ define(function (require, exports, module) {
     var Layout = require('backbone.layoutmanager');
     //var Nav = require('utilities/nav');
     //require('bootstrap');
+
+    SE.init({
+        clientId: 5412,
+        key: 'MzO8)tVMOLMm)4PM4H52nQ((',
+        channelUrl: 'http://ramirezdev.github.io/blizzard-application/',
+        complete: function (data) {
+            console.log('Stack Exchange :: Loaded', data);
+        }
+    });
 
     // Provide a global location to place configuration settings and module
     // creation.
@@ -59,6 +72,8 @@ define(function (require, exports, module) {
         el: '#main',
         template: 'layouts/main'
     });
+
+    
 
     module.exports = app;
 });

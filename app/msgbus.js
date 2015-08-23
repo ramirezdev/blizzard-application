@@ -39,6 +39,15 @@ define(function (require, exports, module) {
     });
 
     /***
+     * Get Tags
+     */
+    msgBus.commands.setHandler('tags:get', function(){
+        require(['controllers/tags'], function (controller) {
+            controller.getTags();
+        });
+    });
+
+    /***
      * Helper Event triggers
      * @type {Object}
      */

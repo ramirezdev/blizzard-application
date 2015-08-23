@@ -8,7 +8,8 @@ define(function (require, exports, module) {
     var TagItem = Backbone.View.extend({
         manage: true,
         template: 'tag-item',
-        tagName: 'li',
+        tagName: 'span',
+        className: 'tag-item badge',
 
         serialize: function () {
             var data = this.model.toJSON();
@@ -19,7 +20,7 @@ define(function (require, exports, module) {
 
     TagsView = Backbone.Layout.extend({
         template: 'tags',
-
+        el: false,
         beforeRender: function () {
 
             this.collection.each(function (item) {

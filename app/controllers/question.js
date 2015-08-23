@@ -21,7 +21,7 @@ define(function (require, exports, module) {
                 model: question
             });
         
-            app.layout.setView('.main-container', questionViewModule);
+            app.layout.setView('.questions-holder', questionViewModule);
 
             
             controller.getAnswers();

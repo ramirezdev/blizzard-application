@@ -75,7 +75,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.registerTask('default', ['jshint', 'clean', 'jst', 'requirejs']);
-  grunt.registerTask('publish', ['jshint', 'clean', 'jst', 'requirejs', 'gh-pages']);
+  grunt.registerTask('publish', ['jshint', 'clean', 'jst', 'requirejs', 'sass', 'gh-pages']);
 
 
 

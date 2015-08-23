@@ -14,6 +14,7 @@ define(function (require, exports, module) {
 
         defaults: {
             APIendpoint: 'https://api.stackexchange.com/2.2/',
+            APIkey: 'MzO8)tVMOLMm)4PM4H52nQ((',
             questionID: null,
             title: null,
             searchTerm: null,
