@@ -11638,6 +11638,9 @@ input[type="button"].btn-block {
 #main .blizzard-app .questions-holder .questions-list li .tag {
   background-color: #17345D;
 }
+#main .blizzard-app .questions-holder .question-details {
+  padding: 10px 20px;
+}
 #main .blizzard-app .questions-holder .question-details h1 {
   font-size: 25px;
 }
