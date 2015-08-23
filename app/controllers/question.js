@@ -44,7 +44,7 @@ define(function (require, exports, module) {
                 collection: answers
             }));
 
-            //msgBus.commands.execute('tags:get');
+            msgBus.commands.execute('tags:get');
             app.layout.render();
             
         });

@@ -11670,6 +11670,9 @@ body {
 #main .blizzard-app .questions-holder .question-details .owner a {
   color: #A6C9E3;
 }
+#main .blizzard-app .questions-holder .question-details .question-body a {
+  color: #A6C9E3;
+}
 #main .blizzard-app .questions-holder .all-answers .answers-list {
   list-style: none;
 }

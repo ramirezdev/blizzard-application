@@ -13,11 +13,11 @@ define(function (require, exports, module) {
         
         $.when(fetchingTags).then(function (tags) {
         
-            app.layout.setView('.tags-holder', new TagsView({
+            app.layout.insertView('.tags-holder', new TagsView({
                 collection: tags
-            }));
+            })).render();
 
-            app.layout.render();
+            //app.layout.render();
         });
 
         $.when(fetchingTags).fail(function (model, jqXHR, textStatus) {
