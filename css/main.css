@@ -11613,7 +11613,7 @@ input[type="button"].btn-block {
 #main .blizzard-app .questions-holder .questions-list li {
   cursor: pointer;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000e16), color-stop(100%, #011e32));
-  padding: 5px 5px 5px 15px;
+  padding: 15px;
   border-radius: 10px;
   margin-bottom: 10px;
   border: 1px solid #01B2F1;
