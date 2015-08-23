@@ -11620,11 +11620,20 @@ input[type="button"].btn-block {
 }
 #main .blizzard-app .questions-holder .questions-list li h4 {
   color: #01B2F1;
+  margin: 0;
+  padding: 0;
+}
+#main .blizzard-app .questions-holder .questions-list li p {
+  margin: 0;
+  padding: 0;
 }
 #main .blizzard-app .questions-holder .questions-list li .date {
   font-size: 14px;
   color: #A6C9E3;
   font-style: italic;
+}
+#main .blizzard-app .questions-holder .questions-list li .owner-name {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=main.css.map */
