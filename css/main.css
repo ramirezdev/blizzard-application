@@ -11639,7 +11639,10 @@ input[type="button"].btn-block {
   background-color: #17345D;
 }
 #main .blizzard-app .questions-holder .question-details h1 {
-  font-size: 20px;
+  font-size: 25px;
+}
+#main .blizzard-app .questions-holder .question-details .owner a {
+  color: #A6C9E3;
 }
 #main .blizzard-app .tags-holder .tags-list h1 {
   background-image: -webkit-linear-gradient(top, #01B2F1 0%, #03A4DE 22.91667%, #0394C7 37.5%, #0377a0 55%);
