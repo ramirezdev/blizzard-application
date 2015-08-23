@@ -1,6 +1,6 @@
 <div class="answer-item">
-    <h1>Score: <%= score %></h1> 
-    <h3>User: <%= owner.display_name %></h3> 
+    <h4>Score: <%= score %></h4> 
     <img src="<%= owner.profile_image %>"/>
+    <span class="owner">User: </span><a href="<%= owner.link %>" target="_blank"><%= owner.display_name %></a> 
     <p><%= body %></p>
 </div>

@@ -32,6 +32,7 @@ define(function (require, exports, module) {
             if (this.collection.length > 0) {
 
                 this.collection.each(function (item) {
+                     console.log('answers', item);
                     this.insertView('.answers-list', new AnswerItem({
                         model: item
                     }));

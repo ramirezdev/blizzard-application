@@ -39,14 +39,14 @@ define(function (require, exports, module) {
         var fetchingAnswers = msgBus.reqres.request('answers:entities');
 
         $.when(fetchingAnswers).then(function (answers) {
-
-            console.log('RECEIVED ANSWERS: ', answers);
         
             questionViewModule.insertView('.all-answers', new AnswersView({
                 collection: answers
             }));
 
+            //msgBus.commands.execute('tags:get');
             app.layout.render();
+            
         });
 
         $.when(fetchingAnswers).fail(function (model, jqXHR, textStatus) {

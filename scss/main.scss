@@ -37,10 +37,23 @@
 
 //Vars
 $gray : #808080;
+$link-blue : #A6C9E3;
 
 //Main styles
+body{background-color:#000;}
 #main{
 	background: url(../img/bg-subpage.jpg) #010E16 50% 0 no-repeat;
+
+	header{
+		h1{
+			a{
+				text-decoration: none;
+				@include gradText();
+				font-size: 30px;
+			}
+			
+		}
+	}
 
 
 	.blizzard-app{
@@ -78,9 +91,73 @@ $gray : #808080;
 					.owner-name{
 						font-size: 14px;
 					}
+
+					.tag{
+						background-color:#17345D;
+					}
 				}
 			}
 
+			.question-details{
+
+				padding: 10px 20px;
+
+				h1{
+					font-size: 25px;
+				}
+
+				.owner{
+					margin-bottom: 35px;
+					img{
+						width: 50px;
+						margin-right: 10px;
+					}
+					a{
+						color: $link-blue; 
+					}
+				}
+
+			}
+
+			.all-answers{
+				.answers-list{
+					list-style: none;
+					li{
+						.answer-item{
+							    border: 1px solid $link-blue;
+							    padding: 17px;
+							    border-radius: 10px;
+							img{
+								width: 50px;
+								margin-right: 10px;
+							}
+							a{
+								color: $link-blue; 	
+							}
+						}
+					}
+				}
+			}
+
+		}
+
+		.tags-holder{
+
+			.tags-list{
+				h1{
+					@include gradText();
+					font-size: 20px;
+				}
+
+				.tag-item{
+					background-color:#17345D;
+				}
+			}
+
+		}
+
+		.search-holder{
+			padding:35px 0;
 		}
 
 

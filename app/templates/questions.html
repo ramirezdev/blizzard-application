@@ -1,18 +1,49 @@
 <div class="search-holder">
-	<label for="topic">Search:</label> <input type="text" name="topic" id="topic"> <input type="submit" value="Submit" id="topic-submit">
+	<!-- <div class="form-group">
+		<label for="topic">Search:</label>
+		<input type="text" class="form-control" name="topic" id="topic">
+		<input type="submit" value="Submit" id="topic-submit">
+	</div> -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="input-group">
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="button" id="topic-submit">Search</button>
+				</span>
+				<input type="text" class="form-control" placeholder="Search for questions..." name="topic" id="topic">
+			</div>
+		</div>
+	</div>
 
 </div>
 
-<div>
-	<label for="param-sort">Sort:</label> <select name="sort" id="param-sort">
-		<option value="activity">activity</option>
-		<option value="votes" >votes</option>
-		<option value="creation">creation</option>
-		<option value="hot">hot</option>
-		<option value="week">week</option>
-		<option value="month">month</option>
-	</select>
+<div class="row">
+	<div class="col-lg-12">
+		<!-- <label for="param-sort">Sort:</label> 
+		<select name="sort" id="param-sort">
+			<option value="activity">activity</option>
+			<option value="votes" >votes</option>
+			<option value="creation">creation</option>
+			<option value="hot">hot</option>
+			<option value="week">week</option>
+			<option value="month">month</option>
+		</select> -->
+
+		<div class="form-group">
+			<label for="param-sort">Sort:</label>
+			<select class="form-control" id="param-sort">
+				<option value="activity">activity</option>
+				<option value="votes" >votes</option>
+				<option value="creation">creation</option>
+				<option value="hot">hot</option>
+				<option value="week">week</option>
+				<option value="month">month</option>
+  			</select>
+		</div>
+		
+	</div>
 </div>
+
 <ul class="questions-list">
 	<h1>Questions: </h1>
 </ul>

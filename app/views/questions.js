@@ -15,11 +15,10 @@ define(function (require, exports, module) {
             'click': 'showQuestion'
         },
 
-        initialize: function () {
+        afterRender: function () {
 
             var date = this.model.get('creation_date');
-            date = moment.unix(date).format('MM/DD/YYYY');
-            this.model.set('creation_date', date);
+            this.model.set('creation_date', moment.unix(date).format('MM/DD/YYYY'));
 
         },
 

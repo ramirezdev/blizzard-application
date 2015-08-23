@@ -1,4 +1,5 @@
 <h1><%= items[0].title %></h1>
-<p>Asked by: <a href="<%= items[0].owner.display_name %>"><%= items[0].owner.display_name %></a></p>
-<img src="<%= items[0].owner.profile_image %>"/>
+<p class="owner"><img src="<%= items[0].owner.profile_image %>"/> Asked by: <a href="<%= items[0].owner.link %>" target="_blank"><%= items[0].owner.display_name %></a></p>
+
 <p><%= items[0].body %></p>
+
