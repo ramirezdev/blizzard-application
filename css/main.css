@@ -11618,5 +11618,13 @@ input[type="button"].btn-block {
   margin-bottom: 10px;
   border: 1px solid #01B2F1;
 }
+#main .blizzard-app .questions-holder .questions-list li h4 {
+  color: #01B2F1;
+}
+#main .blizzard-app .questions-holder .questions-list li .date {
+  font-size: 14px;
+  color: #A6C9E3;
+  font-style: italic;
+}
 
 /*# sourceMappingURL=main.css.map */
