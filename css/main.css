@@ -11595,6 +11595,18 @@ input[type="button"].btn-block {
 #main {
   background: url(../img/bg-subpage.jpg) #010E16 50% 0 no-repeat;
 }
+#main header h1 a {
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(top, #01B2F1 0%, #03A4DE 22.91667%, #0394C7 37.5%, #0377a0 55%);
+  -webkit-background-clip: text;
+  background-size: 1.2em 1.2em;
+  -webkit-text-fill-color: transparent;
+  color: #E8E361;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 30px;
+}
 #main .blizzard-app .questions-holder .questions-list {
   list-style: none;
   padding: 0;
