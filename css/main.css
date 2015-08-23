@@ -11635,5 +11635,8 @@ input[type="button"].btn-block {
 #main .blizzard-app .questions-holder .questions-list li .owner-name {
   font-size: 14px;
 }
+#main .blizzard-app .questions-holder .questions-list li .tag {
+  background-color: #17345D;
+}
 
 /*# sourceMappingURL=main.css.map */
