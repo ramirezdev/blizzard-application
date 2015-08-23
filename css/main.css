@@ -11592,6 +11592,10 @@ input[type="button"].btn-block {
     display: none !important;
   }
 }
+body {
+  background-color: #000;
+}
+
 #main {
   background: url(../img/bg-subpage.jpg) #010E16 50% 0 no-repeat;
 }
