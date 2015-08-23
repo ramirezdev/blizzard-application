@@ -10,7 +10,7 @@ define(function (require, exports, module) {
     });
 
     loadinglModule.show = function (options) {
-        options = options || {message: 'Loading...'};
+        options = options || {message: ''};
         layout.insertView('', new LoadingView({
             model: new Backbone.Model(options)
         })).render();

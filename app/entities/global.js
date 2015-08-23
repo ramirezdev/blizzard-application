@@ -20,12 +20,8 @@ define(function (require, exports, module) {
             searchTerm: null,
             currentSort: 'activity'
 			
-        }//,
-
-        //initialize: function () {
-            //this.on('change', this.updateStorage);
-            //this.on('change:pageTitle', this.updatePageTitle);
-        //}
+        }
+        
     });
 
 

@@ -18,7 +18,7 @@ define(function (require, exports, module) {
                 corners: 0, // Corner roundness (0..1)
                 rotate: 0, // The rotation offset
                 direction: 1, // 1: clockwise, -1: counterclockwise
-                color: '#000', // #rgb or #rrggbb
+                color: '#FFF', // #rgb or #rrggbb
                 speed: 1, // Rounds per second
                 trail: 52, // Afterglow percentage
                 shadow: false, // Whether to render a shadow
