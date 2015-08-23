@@ -11652,5 +11652,8 @@ input[type="button"].btn-block {
 #main .blizzard-app .tags-holder .tags-list .tag-item {
   background-color: #17345D;
 }
+#main .blizzard-app .search-holder {
+  padding: 35px 0;
+}
 
 /*# sourceMappingURL=main.css.map */
