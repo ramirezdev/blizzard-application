@@ -11660,6 +11660,9 @@ input[type="button"].btn-block {
 #main .blizzard-app .questions-holder .all-answers .answers-list li .answer-item img {
   width: 50px;
 }
+#main .blizzard-app .questions-holder .all-answers .answers-list li .answer-item a {
+  color: #A6C9E3;
+}
 #main .blizzard-app .tags-holder .tags-list h1 {
   background-image: -webkit-linear-gradient(top, #01B2F1 0%, #03A4DE 22.91667%, #0394C7 37.5%, #0377a0 55%);
   -webkit-background-clip: text;
