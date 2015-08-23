@@ -11638,5 +11638,8 @@ input[type="button"].btn-block {
 #main .blizzard-app .questions-holder .questions-list li .tag {
   background-color: #17345D;
 }
+#main .blizzard-app .tags-holder .tags-list .tag-item {
+  background-color: #17345D;
+}
 
 /*# sourceMappingURL=main.css.map */
