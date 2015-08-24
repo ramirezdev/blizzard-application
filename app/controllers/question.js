@@ -25,7 +25,7 @@ define(function (require, exports, module) {
 
             
             controller.getAnswers();
-            //app.layout.render();
+
         });
 
         $.when(fetchingQuestion).fail(function (model, jqXHR, textStatus) {

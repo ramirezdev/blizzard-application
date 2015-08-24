@@ -42,7 +42,7 @@ define(function (require) {
             return response.items;  
         }, 
         url: function () {
-            return app.globalModel.get('APIendpoint') + 'search?order=desc&sort=activity&intitle=' + app.globalModel.get('searchTerm') +'&site=stackoverflow&key=' + app.globalModel.get('APIkey');
+            return app.globalModel.get('APIendpoint') + 'search?order=desc&sort=' + app.globalModel.get('currentSort') + '&intitle=' + app.globalModel.get('searchTerm') +'&site=stackoverflow&key=' + app.globalModel.get('APIkey');
         }
     });
 
