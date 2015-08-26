@@ -25,7 +25,7 @@ define(function (require, exports, module) {
 
         errorPage: function () {
             console.log('route error');
-            return msgBus.commands.execute('equifit:error');
+            return msgBus.commands.execute('blizzard:error');
         }
     });
 
